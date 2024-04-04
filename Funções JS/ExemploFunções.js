@@ -60,6 +60,63 @@ ImprimirNota(false)
 const ImprimirNota = [function(a,b){return a * b}]
 console.log(ImprimirNota[0](2,2)) 
 console.log(ImprimirNota[0](21,2)) 
+console.log(ImprimirNota[0](33,9)) 
+console.log(ImprimirNota[0](11,0)) 
+console.log(ImprimirNota[0](91,2)) 
+
+
+const Calcular = [function(n1,n2,n3){return n1 + n2 * n3}]
+console.log(`O cálculo é: ${Calcular[0](3,2,7)}`)
+console.log(`O cálculo é: ${Calcular[0](3,3,3)}`)
+console.log(`O cálculo é: ${Calcular[0](1,9,7)}`)
+
+//Armazenar em um atributo de objeto
+
+const obj = {}
+obj.falar = function(){return 'Opa'}
+console.log(obj.falar())
+
+const produtos = {}
+produtos.produto1 = function(a,b){return a + b}
+produtos.produto2 = function(){return "Arroz"}
+produtos.produto3 = function(){return "Macarrão"}
+produtos.produto4 = function(){return "Carne"}
+
+console.log(produtos.produto1(2,2))
+console.log(produtos.produto2())
+console.log(produtos.produto3())
+console.log(produtos.produto4())
+
+//Passar função como parâmetro
+
+function run(fun){
+    fun()
+}
+
+run(function(){console.log('Executando...')})
+
+function comidas(nome_comida){
+    nome_comida()
+}
+
+comidas(function(){console.log("LASANHAAA")})
+comidas(function(){console.log("LINGUIÇA")})
+comidas(function(){console.log("CACHORRO QUENTE")})
+comidas(function(){console.log("PIPOCAAA")})
+comidas(function(){console.log("ESTROGONOFEEE")})
+
+//Uma função pode retornar/conter uma função
+
+function soma (a,b){
+    return function (c) {
+        console.log(a + b + c)
+    }
+}
+
+soma(2,3)(4)
+const cincoMais = soma (2,3)
+cincoMais(4)
+cincoMais(0)
 
 
 
