@@ -89,6 +89,7 @@ console.log(produtos.produto4())
 
 //Passar função como parâmetro
 
+/*
 function run(fun){
     fun()
 }
@@ -104,9 +105,11 @@ comidas(function(){console.log("LINGUIÇA")})
 comidas(function(){console.log("CACHORRO QUENTE")})
 comidas(function(){console.log("PIPOCAAA")})
 comidas(function(){console.log("ESTROGONOFEEE")})
+*/
 
 //Uma função pode retornar/conter uma função
 
+/*
 function soma (a,b){
     return function (c) {
         console.log(a + b + c)
@@ -117,6 +120,64 @@ soma(2,3)(4)
 const cincoMais = soma (2,3)
 cincoMais(4)
 cincoMais(0)
+*/
+
+
+//RELEMBRANDO...
+
+
+function multiplicacaoEsoma (a,b,c) {
+    return function(d) {
+        console.log(a + b * c * d)
+    }
+}
+
+multiplicacaoEsoma(2,3,9)(1)
+
+const Calculando = multiplicacaoEsoma(2,3,9)
+Calculando(9)
+Calculando(2)
+Calculando(5)
+
+function musica(instrumentos){
+    instrumentos()
+}
+
+musica(function(){console.log("2 instrumentos")})
+musica(function(){console.log("Contrabaixo Elétrico")})
+musica(function(){console.log("Guitarra")})
+musica(function(){console.log("Violão de aço")})
+musica(function(){console.log(102.29)})
+musica(function(){console.log(true)})
+musica(function(){console.log(NaN)})
+
+const Musica = {}
+Musica.instrumento1 = function() {return "Contrabasso"}
+Musica.instrumento2 = function() {return "Guitarra"}
+Musica.instrumento3 = function() {return "Violão"}
+Musica.instrumento4 = function() {return "Cajon"}
+
+console.log(Musica.instrumento1())
+console.log(Musica.instrumento2())
+console.log(Musica.instrumento3())
+console.log(Musica.instrumento4())
+
+
+const Produto = function divisao (a,b) {
+    return a / b
+}
+
+let result = myFunction(2,2)
+Produto (2,2)
+
+const instrumentos = [function(Nome_instrumento){return Nome_instrumento}]
+console.log(instrumentos[0]("Baixo"))
+console.log(instrumentos[0]("Basso"))
+console.log(instrumentos[0]("Double Bass"))
+console.log(instrumentos[0]("Contrabaixo Acústico"))
+console.log(instrumentos[0]("Contrabaixo Elétrico"))
+console.log(instrumentos[0]("Baixolão"))
+
 
 
 
