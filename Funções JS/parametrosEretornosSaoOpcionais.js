@@ -12,3 +12,5 @@ console.log(area(2))
 console.log(area())
 console.log(area(2,3,15,73,11))
 console.log(area(5,5))
+
+//O JS pode retornar qualquer tipo de dado.
