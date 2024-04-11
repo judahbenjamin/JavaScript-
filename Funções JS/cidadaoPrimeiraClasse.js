@@ -44,3 +44,5 @@ function soma (a, b) {
 soma (2,3)(4)
 const cincoMais = soma(2,3)
 cincoMais(4)
+
+function fun3(){}
